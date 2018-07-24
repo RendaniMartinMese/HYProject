@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/hyp_connect" />
+      <xs:element name="getAllAds">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllAdsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/hyp_connect" minOccurs="0" name="getAllAdsResult" nillable="true" type="q1:ArrayOfAd" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addAd">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/hyp_connect" minOccurs="0" name="ad" nillable="true" type="q2:Ad" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addAdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/hyp_connect" minOccurs="0" name="addAdResult" nillable="true" type="q3:Ad" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateAd">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateAdResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllReports">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllReportsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/hyp_connect" minOccurs="0" name="getAllReportsResult" nillable="true" type="q4:ArrayOfReport" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/hyp_connect" minOccurs="0" name="report" nillable="true" type="q5:Report" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/hyp_connect" minOccurs="0" name="addReportResult" nillable="true" type="q6:Report" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateReportRSTATUS">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" type="xs:int" />
+            <xs:element minOccurs="0" name="newStatus" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateReportRSTATUSResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/hyp_connect" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/hyp_connect" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfAd">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Ad" nillable="true" type="tns:Ad" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfAd" nillable="true" type="tns:ArrayOfAd" />
+      <xs:complexType name="Ad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AD_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="AD_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AUDIO_DIR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATE_DURATION" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Ad" nillable="true" type="tns:Ad" />
+      <xs:complexType name="ArrayOfReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Report" nillable="true" type="tns:Report" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfReport" nillable="true" type="tns:ArrayOfReport" />
+      <xs:complexType name="Report">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CATEGORY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INDEX" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="READ_STATUS" type="xs:int" />
+          <xs:element minOccurs="0" name="REPORT_ID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Report" nillable="true" type="tns:Report" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_getAllAds_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllAds" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllAds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllAdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addAd_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAd" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addAd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateAd_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateAd" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateAd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateAdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllReports_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllReports" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllReports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:addReport" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateReportRSTATUS_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateReportRSTATUS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateReportRSTATUS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateReportRSTATUSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="getAllAds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllAds" message="tns:IService1_getAllAds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllAdsResponse" message="tns:IService1_getAllAds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addAd" message="tns:IService1_addAd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addAdResponse" message="tns:IService1_addAd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateAd" message="tns:IService1_updateAd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateAdResponse" message="tns:IService1_updateAd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllReports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllReports" message="tns:IService1_getAllReports_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllReportsResponse" message="tns:IService1_getAllReports_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addReport" message="tns:IService1_addReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addReportResponse" message="tns:IService1_addReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReportRSTATUS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateReportRSTATUS" message="tns:IService1_updateReportRSTATUS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateReportRSTATUSResponse" message="tns:IService1_updateReportRSTATUS_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllAds">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllAds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAd">
+      <soap:operation soapAction="http://tempuri.org/IService1/addAd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAd">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateAd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllReports">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReport">
+      <soap:operation soapAction="http://tempuri.org/IService1/addReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReportRSTATUS">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateReportRSTATUS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:58876/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

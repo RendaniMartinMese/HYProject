@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hypai", "hypai\hypai.csproj", "{179DC0DD-4918-4494-BE49-BE1269956C79}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EBC90050-414D-46A2-AC37-798FD040E09D} = {EBC90050-414D-46A2-AC37-798FD040E09D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hyp_connect", "hyp_connect\hyp_connect.csproj", "{EBC90050-414D-46A2-AC37-798FD040E09D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenges", "Challenges", "{CCEEFA7A-AA3E-4570-A147-4CE7AC459BBE}"
+	ProjectSection(SolutionItems) = preProject
+		Challenges.txt = Challenges.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{179DC0DD-4918-4494-BE49-BE1269956C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179DC0DD-4918-4494-BE49-BE1269956C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179DC0DD-4918-4494-BE49-BE1269956C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179DC0DD-4918-4494-BE49-BE1269956C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC90050-414D-46A2-AC37-798FD040E09D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC90050-414D-46A2-AC37-798FD040E09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC90050-414D-46A2-AC37-798FD040E09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC90050-414D-46A2-AC37-798FD040E09D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
